@@ -1,0 +1,211 @@
+@use "variables" as *;
+
+.site-header {
+    height: 102px;
+    box-sizing: border-box;
+    margin: auto;
+    padding: 0 5.6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    position: relative;
+    z-index: 5;
+    border-bottom: 1px solid $border-color; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background: rgba($bg, 0.95);
+    box-shadow: 0 4px 15px 5px rgba($bg, 0.9);
+    z-index: 999;
+
+    .brand {
+        display: flex;
+        gap: 13px;
+        align-items: center;
+        text-decoration: none;
+        color: #c9c7c1;
+        transition: color .2s;
+
+        .brand-symbol {
+            width: 48px;
+            height: 48px;
+            overflow: hidden;
+            position: relative;
+            flex-shrink: 0;
+            padding: 15px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                max-width: none;
+                object-fit: cover;
+                transform:scale(1.5);
+            }
+        }
+
+        .brand-name {
+            color: $text;
+            font-family: $display-font;
+            font-size: $font-size;
+            letter-spacing: .045em;
+            line-height: 1.08;
+            display: flex;
+            flex-direction: column;
+            font-weight: 700;
+
+            small {
+                font-size: .75rem;
+                letter-spacing: .22em;
+                font-family: $main-font;
+                color: $muted;
+                font-weight: 400;
+            }
+        }
+    }
+
+    .desktop-nav {
+        display: flex;
+        align-items: center;
+        gap: 35px;
+        font-size: .875rem;
+
+        button, a {
+            -webkit-tap-highlight-color: transparent;
+            color: $header-link-color;
+            text-decoration: none;
+
+            &:hover {
+                color: $orange;
+            }
+        }
+
+        .nav-cta {
+            border: 1px solid #ffffff35;
+            padding: 10px 18px;
+            display: flex;
+            gap: 18px;
+            align-items: center;
+
+            .tiny-flame {
+                color: $orange;
+                font-size: 1.15rem;
+            }
+        }
+    }
+
+    .menu-toggle, .mobile-nav {
+        display: none;
+        cursor: pointer;
+    }
+
+    
+
+    @media (max-width: 1100px) {
+        padding-inline: 5%;
+
+        .desktop-nav {
+            gap: 22px;
+        }
+
+       
+    }
+
+    @media (max-width: 820px) {
+        .desktop-nav {
+            display: none;
+        }
+
+        .mobile-nav{
+            display: flex;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            flex-direction: column;
+            background: $bg-light;
+            width: 100%;
+            height: 0;
+            overflow: hidden;
+            box-sizing: border-box;
+            transition: height .4s ease-in-out;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+           
+            .header-link {
+                &:hover {
+                 background: $border-color;
+                }
+
+                &:first-child {
+                    border-top: 2px solid $border-color;
+                }
+                
+                &:not(:last-child) {
+                    border-bottom: 1px solid $border-color;
+                }
+
+                &:last-of-type {
+                    border-bottom: 2px solid $border-color;
+                }
+            }
+            &.open {
+                height: 106px;
+            }
+        }
+
+
+        .menu-toggle {
+            display: flex;
+            background: none;
+            border: 1px solid $border-color;
+            padding: 12px;
+            height: 44px;
+            width: 44px;
+
+            span {
+                position: absolute;
+                top: calc(50% - 0.5px);
+                width: 18px;
+                height: 1px;
+                background: $text;
+                transition: transform .2s ease-in-out, top .2s ease-in-out;
+
+                &:nth-child(1) {
+                    top: calc(50% - 3.5px);
+
+                }
+                &:nth-child(2) {
+                    top: calc(50% + 3.5px);
+                }
+            }
+
+            &.open {
+                span {
+                    top: calc(50% - 0.5px);
+                    &:nth-child(1) {
+                        transform: rotate(45deg);
+                    }
+                    &:nth-child(2) {
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+        }
+        
+
+
+    }
+}
+
+ .header-link 
+ {
+    color: $text;
+    text-decoration: none;
+    padding: 12px 0;
+    transition: color .2s;
+    padding: 12px;
+
+    &:hover {
+        color: $orange;
+    }
+}

@@ -1,0 +1,26 @@
+<header class="site-header">
+    <a class="brand" href="#top" aria-label="Phoenix Paradox home">
+        <span class="brand-symbol">
+            <img src="assets/images/transparent.png" alt="" width="1024" height="1024">
+        </span>
+        <span class="brand-name">
+            PHOENIX PARADOX
+            <small>GAMES STUDIO</small>
+        </span>
+    </a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="#games" class="header-link">The games</a>
+        <a href="#studio" class="header-link">The studio</a>
+        <a class="nav-cta" href="#games">
+            Find your next world <span class="tiny-flame" aria-hidden="true">✦</span>
+        </a>
+    </nav>
+    <button class="menu-toggle" [class.open]="isMenuOpen()" type="button" (click)="toggleMenu()">
+        <span></span>
+        <span></span>
+    </button>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" [class.open]="isMenuOpen()">
+        <a href="#games" class="header-link">The games</a>
+        <a href="#studio" class="header-link">The studio</a>
+    </nav>
+</header>

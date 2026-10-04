@@ -1,0 +1,119 @@
+@use "variables" as *;
+
+
+@font-face {
+  font-family: 'StudioDisplay';
+   src: url('/assets/fonts/nimbus-sans-narrow/NimbusSansNarrow-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'StudioDisplay';
+  src: url('/assets/fonts/nimbus-sans-narrow/NimbusSansNarrow-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: $bg;
+    color: $text;
+    font-family: $main-font;
+    font-size: 1rem;
+    line-height: 1.65;
+}
+
+.ember-line {
+    width: 27px;
+    height: 2px;
+    background: $orange;
+    flex-shrink: 0;
+}
+
+.section-wrap {
+    max-width: 1440px;
+    margin: auto;
+    padding-left: 5.6%;
+    padding-right: 5.6%;
+
+    @media (max-width: 760px) {
+        padding-inline: 6%;
+    }
+}
+
+.btn.btn-primary{
+    background: $orange;
+    color: #000;
+    border: 1px solid $orange;
+    font-family: $main-font;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.65;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
+
+    &:hover {
+        transform: translateY(-2px);
+        filter: brightness(1.1);
+    }
+}
+
+.text-link{
+    color: $text;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid $muted;
+    font-family: $main-font;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.65;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        border-bottom: 1px solid $orange;
+    }
+}
+
+.eyebrow {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+    font-size: 1rem;
+    letter-spacing: .15em;
+    font-weight: 600;
+    color: $orange;
+    line-height: 1.5;
+    font-family: $main-font;
+}
+
+.btn.btn-secondary
+{
+    color: #CCC;
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 1.5rem;
+    cursor: pointer;
+
+    &:hover {
+        background: #1c140e;
+        border: 1px solid rgba($orange, 0.5);
+    }
+}
+
+.hr {
+    background-color: $border-color;
+    height: 0.5px;
+    width: 100%;    
+    margin: 50px auto;
+}
