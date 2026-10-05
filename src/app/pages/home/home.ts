@@ -19,7 +19,7 @@ export class Home {
         data: {
           title: 'CURSED RECORDS: APARTMENT 14',
           description: 'You came to Apartment 14 looking for a story. Now you need to find a way out. Explore its rooms, inspect the evidence, and piece together the truth behind a tenant’s disappearance and the ritual left behind.',
-          imageUrl: 'assets/images/cursed-records.png',
+          imageUrl: 'assets/images/cursed-records.jpg',
           genre: 'Horror, Adventure',
           features: [
             { label: 'Platform', value: 'PC' },
@@ -35,7 +35,7 @@ export class Home {
         data: {
           title: 'Funny Riddles',
           description: 'A playful collection of word challenges, visual clues, and clever connections. Discover different puzzle styles as you progress, from finding hidden words to completing a rhyme, with puzzles in Arabic and English.',
-          imageUrl: 'assets/images/funny-riddles.png',
+          imageUrl: 'assets/images/funny-riddles.jpg',
           genre: 'Puzzle, Casual',
           features: [
             { label: 'Platform', value: 'Phone & Tablet' },
