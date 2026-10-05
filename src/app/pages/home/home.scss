@@ -564,87 +564,6 @@
             }
         }
     }
-
-    .site-footer {
-        border-top: 1px solid $border-color;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-        padding-top: 40px;
-        padding-bottom: 24px;
-
-        .footer-upper {
-            display: flex;
-            width: 100%;
-            justify-content: space-between;
-            align-items: center;
-            
-            .footer-brand {
-                font-family: $display-font;
-                font-size: 2rem;
-                font-weight: bold;
-                line-height: 2.25rem;
-                letter-spacing: .04em;
-                color: $text;
-                text-decoration: none;
-
-                span {
-                    color: $muted;
-                    font-size: 1.7rem;
-                    font-weight: 200;
-                    letter-spacing: 0.4rem;
-                }
-                flex-grow: 1;
-            }
-
-            p {
-                font-size: 1rem;
-                color: #8a8b84;
-                justify-self: center;
-                flex-grow: 1;
-                text-align: center;
-            }
-
-            .footer-top {
-                flex-grow: 1;
-                font-size: 1.25rem;
-                text-align: end;
-                text-decoration: none;
-                color: #AAA;
-                cursor: pointer;
-
-                &:hover 
-                {
-                    text-decoration: underline;
-                }
-            }
-        }
-
-        .hr {
-            margin: 15px auto;
-        }
-        
-        .footer-bottom {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 100%;
-            font-size: .8125rem;
-            color: #8a8b84;
-
-            span {
-                text-align: center;
-                font-size: 0.925rem;
-
-                &:last-child {
-                    font-size: 1rem;
-                }
-            }
-        }
-
-        
-    }
 }
 
 
@@ -781,6 +700,12 @@
             }
         }
 
+        .ticker {
+            span:nth-of-type(3), small:nth-of-type(3) {
+                display: none;
+            }  
+        }
+
         .projects {
             .cards {
                 .game-card {
@@ -808,39 +733,6 @@
                     font-size: 1.25rem;
                     text-decoration: none;
                     border-radius: 0px;
-                }
-            }
-        }
-
-        .site-footer 
-        {
-            .footer-upper {
-                align-items: center;
-                gap: 20px;
-
-                flex-wrap: wrap;
-
-                .footer-brand {
-                    text-align: center;
-                }
-
-                p {
-                    text-align: center;
-                }
-
-                .footer-top {
-                    text-align: center;
-                    margin-block: 30px;
-                }
-            }
-
-            .footer-bottom {
-                flex-direction: column;
-                align-items: center;
-                gap: 10px;
-
-                span {
-                    text-align: center;
                 }
             }
         }
@@ -990,17 +882,13 @@
                 flex-direction: column;
             }
         }
-
-        .site-footer 
-        {
-            .footer-upper 
-            {
-                flex-direction:column;
-
-                .footer-top {
-                    margin-top: 0px;
-                }
-            }
-        }
     }
+}
+
+@media (max-width: 500px) {
+        .ticker {
+            span:nth-of-type(2), small:nth-of-type(2) {
+                display: none;
+            }  
+        }
 }
