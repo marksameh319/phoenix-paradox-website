@@ -220,3 +220,9 @@ body {
   background: rgba($orange, 0.7);
   cursor: pointer;
 }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:active {
+  background: rgba($orange, 0.5);
+  cursor: grabbing;
+}
