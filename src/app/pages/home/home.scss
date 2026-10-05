@@ -243,15 +243,6 @@
                         color: $text;
                         z-index: 10;
 
-                        .art-label{
-                            padding: 0px 15px;
-                            width: fit-content;
-                            height: fit-content;
-                            background: #0b0e10a6;
-                            border: 1px solid $border-color;
-                            line-height: 3rem;
-                        }
-
                         .art-text{
                             display: flex;
                             justify-content: space-between;
@@ -400,7 +391,7 @@
                     }
                     
                     .game-category {
-                        color: #82d4cf;
+                        color: $blue;
                     }
 
                     .game-art {

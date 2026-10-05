@@ -1,0 +1,47 @@
+<div class="game-dialog">
+    <div class="game-art">
+        <span class="art-label">CONCEPT ART</span>
+        <img src="{{ data.imageUrl }}" alt="Concept art of a shadowy apartment corridor with a half-open door numbered 14" loading="lazy">
+    </div>
+    <div class="game-copy">
+        <p class="eyebrow" [style.color]="data.themeColor">{{ data.genre }}</p>
+        <h2 class="game-title">{{ data.title }}</h2>
+        <p class="game-description">{{ data.description }}</p>
+        <div class="game-features" aria-label="Game features">
+            @for (feature of data.features; track feature.label)
+            {
+                <div class="feature">
+                    <span class="feature-label">{{ feature.label }}</span>
+                    <span class="feature-value">{{ feature.value }}</span>
+                </div>
+            }
+        </div>
+        <div class="hr"></div>
+        <p class="game-notes">{{ data.note }}</p>
+        <div class="game-links">
+
+            @if (data.steamUrl)
+            {
+                <a class="btn btn-primary" [href]="data.steamUrl" target="_blank" rel="noopener noreferrer">
+                    <span>View on Steam</span>
+                    <span class="button-symbol" aria-hidden="true">🎮</span>
+                </a>
+            }
+
+            @if (data.trailerUrl)
+            {
+                <a class="btn btn-secondary" [href]="data.trailerUrl" target="_blank" rel="noopener noreferrer">
+                    <span>Watch Trailer</span>
+                    <span class="button-symbol" aria-hidden="true">🎥</span>
+                </a>
+            }
+            
+            <button class="btn btn-secondary" [ngClass]="data.themeBtnClass" mat-dialog-close>
+                <span>Back to games</span>
+            </button>
+        </div>
+    </div>
+    <div class="btn btn-secondary close-btn" [ngClass]="data.themeBtnClass" mat-dialog-close aria-label="Close dialog">
+        <span class="close-symbol" aria-hidden="true">×</span>
+    </div>
+</div>

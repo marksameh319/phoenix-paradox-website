@@ -15,7 +15,8 @@
     "module": "preserve",
     "paths": {
       "@components": ["./src/app/components/index.ts"],
-      "@pages": ["./src/app/pages/index.ts"]
+      "@pages": ["./src/app/pages/index.ts"],
+      "@interfaces": ["./src/app/interfaces/index.ts"]
     },
   },
   "angularCompilerOptions": {
